@@ -17,8 +17,10 @@ export default function Search({ hideButtons=false }) {
         e.preventDefault()
         console.log('hi', input)
 
+        // dispatch and action
         dispatch({
-            type: actionTypes.SET_SEARCH_TERM
+            type: actionTypes.SET_SEARCH_TERM,
+            term: input,
         })
 
         history.push('/search')
